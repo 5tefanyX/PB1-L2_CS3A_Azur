@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostIt</title>
+    <link rel="stylesheet" href="postit.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+
+        <div id="userSection">
+
+            <h2>User Information</h2>
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label>Date of Birth</label>
+            <input type="date" id="birthday">
+
+            <label>Year Level</label>
+            <select id="yearLevel">
+                <option value="">Select Year Level</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+
+            <label>Gender</label>
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button onclick="setUser()">Continue</button>
+
+        </div>
+
+        <div id="postSection">
+            <h2>Create a Post</h2>
+            <textarea id="post" placeholder="Write your caption..."></textarea>
+            <button onclick="createPost()">POST</button>
+            <div id="thread"></div>
+        </div>
+    </div>
+
+    <script src="postit.js"></script>
+
+</body>
+</html>
